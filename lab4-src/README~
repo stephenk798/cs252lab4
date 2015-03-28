@@ -1,0 +1,3 @@
+PART1
+The output I optained for step 3 resulted in a mixed printing of A, B, C, D, and E, though only when threads 3 and 4 were created before printC, otherwise thr1 would only print A, B, and C. In step 5, the reason only C is printed is because the threads are never created. printC is a function with an infinite loop, and in thr2.cc t1 and t2 are created after printC is called, and the part of the program is never reached because printC is an infinite loop. In thr1.cc the threads are created before pritnC is called, so they begin running their own versions of printC, the original program creates all the other threads.
+
